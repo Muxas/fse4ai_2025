@@ -4,14 +4,14 @@ services:
   fse4ai_01:
     image: fse4ai_01
     build:
-      context: 01_Unix
+      context: Unix1
     stdin_open: true
     tty: true
 
   fse4ai_02:
     image: fse4ai_02
     build:
-      context: 02_Unix
+      context: unix2
     stdin_open: true
     tty: true
 
