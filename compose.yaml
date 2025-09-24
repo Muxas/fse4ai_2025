@@ -11,7 +11,7 @@ services:
   fse4ai_02:
     image: fse4ai_02
     build:
-      context: unix2
+      context: Unix2
     stdin_open: true
     tty: true
 
