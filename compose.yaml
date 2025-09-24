@@ -1,0 +1,38 @@
+name: fse4ai
+
+services:
+  fse4ai_01:
+    image: fse4ai_01
+    build:
+      context: 01_Unix
+    stdin_open: true
+    tty: true
+
+  fse4ai_02:
+    image: fse4ai_02
+    build:
+      context: 02_Unix
+    stdin_open: true
+    tty: true
+
+  fse4ai_04_server:
+    image: fse4ai_04_server
+    build:
+      context: 04_remote
+      dockerfile: Dockerfile.server
+
+  fse4ai_04_client:
+    image: fse4ai_04_client
+    build:
+      context: 04_remote
+      dockerfile: Dockerfile.client
+    stdin_open: true
+    tty: true
+
+  fse4ai_05:
+    image: fse4ai_05
+    build:
+      context: 05_building
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
